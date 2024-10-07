@@ -1,5 +1,11 @@
 {
-  "name": "nuxt-app",
+  "name": "areal_script",
+  "description": "Areal Assistant Web Script",
+  "author": {
+    "email": "hoseinaraghi84@gmail.com",
+    "name": "Hossein Araghi",
+    "url": "https://github.com/Hossara"
+  },
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,6 +18,8 @@
   "dependencies": {
     "nuxt": "^3.13.0",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "@volar/language-server": "2.4.0-alpha.18",
+    "@vue/language-server": "2.0.28"
   }
 }
