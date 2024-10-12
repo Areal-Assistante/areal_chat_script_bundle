@@ -7,19 +7,22 @@
     "url": "https://github.com/Hossara"
   },
   "private": true,
-  "type": "module",
   "scripts": {
-    "build": "nuxt build script",
-    "dev": "nuxt dev script",
-    "generate": "nuxt generate script",
-    "preview": "nuxt preview script",
-    "postinstall": "nuxt prepare script"
+    "dev": "webpack serve --mode development --env development",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production"
   },
-  "dependencies": {
-    "nuxt": "^3.13.0",
-    "vue": "latest",
-    "vue-router": "latest",
-    "@volar/language-server": "2.4.0-alpha.18",
-    "@vue/language-server": "2.0.28"
+  "dependencies": { "webpack": "^5.95.0" },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.0",
+    "sass": "^1.79.5",
+    "sass-loader": "^16.0.2",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.3",
+    "vue": "^3.5.12",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }
