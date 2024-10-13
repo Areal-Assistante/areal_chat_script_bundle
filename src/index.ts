@@ -1,19 +1,48 @@
-(function () {
-    'use strict'
+import { createApp, onMounted } from "vue"
+import "./styles/main.css"
 
-    if (!window || typeof document !== 'undefined') {
+type ArealWindowType = {
+    isCustomButton?: boolean,
+    openChatWindow?: () => void
+}
+
+declare global {
+    interface Window {
+        areal: ArealWindowType
+    }
+}
+
+(function() {
+    // Rules
+    if (!window || typeof document === 'undefined') {
         console.error("Missing window or document")
         return
     }
 
-    const { createApp, ref } = Vue
+    // Main container
+    const container = document.createElement("div")
+    container.id = "app"
+    container.innerHTML = `dd`
 
-    createApp({
+    // Floating Button
+
+    document.body.appendChild(container)
+
+    // Vue app
+    const app =  createApp({
         setup() {
-            const message = ref('Hello vue!')
-            return {
-                message
+            const openChatWindow = () => {
+
             }
+
+            onMounted(() => {
+                window.areal = {
+                    isCustomButton: false,
+                    openChatWindow: openChatWindow
+                }
+            })
         }
-    }).mount('#app')
+    })
+
+    app.mount('#app')
 })()

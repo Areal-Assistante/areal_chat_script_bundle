@@ -1,0 +1,5 @@
+#app {
+    position: absolute;
+    z-index: 99999;
+    inset: 0;
+}
