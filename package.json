@@ -2,6 +2,9 @@
   "name": "areal_script",
   "version": "0.1.0",
   "description": "Areal Assistant Web Script",
+  "repository": {
+    "url": "https://github.com/Areal-Assistante/areal_chat_script_bundle"
+  },
   "author": {
     "email": "hoseinaraghi84@gmail.com",
     "name": "Hossein Araghi",
