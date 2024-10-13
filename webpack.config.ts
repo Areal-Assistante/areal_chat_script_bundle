@@ -1,8 +1,9 @@
-const path = require("path")
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+import webpack from "webpack"
+import HtmlWebpackPlugin from "html-webpack-plugin"
+import path from "path"
 
-ENTRY_PATH = path.resolve(__dirname, "src/index")
-DIST_PATH = path.resolve(__dirname, "dist")
+const ENTRY_PATH = path.resolve(__dirname, "src/index")
+const DIST_PATH = path.resolve(__dirname, "dist")
 
 module.exports = {
     entry: {
