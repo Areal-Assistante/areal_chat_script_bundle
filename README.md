@@ -20,12 +20,12 @@ You can use Areal directly from a CDN via a script tag:
 
 you can use `unpkg`
 ```html
-<script src="https://unpkg.com/areal-script@1/dist/areal_script.js"></script>
+<script src="https://unpkg.com/areal_script@0.1.0/dist/areal_script.js"></script>
 ```
 
 or `jsdelivr`
 ```html
-<script src="https://cdn.jsdelivr.net/npm/areal-script@1/dist/areal_script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/areal_script@0.1.0/dist/areal_script.js"></script>
 ```
 
 <br/>

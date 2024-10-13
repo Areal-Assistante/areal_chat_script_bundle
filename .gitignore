@@ -5,7 +5,8 @@ script/.nuxt
 .nuxt
 .nitro
 .cache
-dist
+dist/index.html
+dist/areal_script.js.LICENSE.txt
 
 # Node dependencies
 node_modules
