@@ -1,75 +1,33 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
-
-Make sure to install the dependencies:
+# Areal script bundle
+Core script bundle that serves areal script webapp on clients' website.
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
+# Install dependencies
 bun install
+
+# Run development
+bun run dev
+
+# Build production
+bun run build:prod
 ```
 
 ## Development Server
+Start the development server on `http://localhost:8080`
 
-Start the development server on `http://localhost:3000`:
+## Usage
+You can use Areal directly from a CDN via a script tag:
 
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+you can use `unpkg`
+```html
+<script src="https://unpkg.com/areal-script@1/dist/areal_script.js"></script>
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+or `jsdelivr`
+```html
+<script src="https://cdn.jsdelivr.net/npm/areal-script@1/dist/areal_script.js"></script>
 ```
 
-Locally preview production build:
+<br/>
 
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Maintainer: **[Hossein Araghi](https://github.com/hossara)** 
