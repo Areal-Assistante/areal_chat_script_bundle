@@ -1,4 +1,4 @@
-import { createApp, onMounted } from "vue"
+import { createApp, h } from "vue"
 import "./styles/main.css"
 
 type ArealWindowType = {
@@ -22,27 +22,15 @@ declare global {
     // Main container
     const container = document.createElement("div")
     container.id = "app"
-    container.innerHTML = `dd`
-
-    // Floating Button
-
     document.body.appendChild(container)
 
+    const FloatingButton = require("./components/FloatingButton.vue")
+
     // Vue app
-    const app =  createApp({
-        setup() {
-            const openChatWindow = () => {
+    const app =  createApp(require("./components/App.vue"))
 
-            }
+    app.component("FloatingButton", FloatingButton)
 
-            onMounted(() => {
-                window.areal = {
-                    isCustomButton: false,
-                    openChatWindow: openChatWindow
-                }
-            })
-        }
-    })
 
-    app.mount('#app')
+    app.mount(container)
 })()
