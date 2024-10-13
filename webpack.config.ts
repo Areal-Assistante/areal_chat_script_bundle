@@ -11,7 +11,7 @@ module.exports = {
     },
     output: {
         path: DIST_PATH,
-        filename: "[name].[contenthash].js",
+        filename: "areal_script.js",
         clean: true,
     },
     module: {
@@ -31,9 +31,17 @@ module.exports = {
         ],
     },
     resolve: {
+        alias: {
+          vue: "vue/dist/vue.esm-bundler.js"
+        },
         extensions: ['.tsx', '.ts', '.js'],
     },
     plugins: [
+        new webpack.DefinePlugin({
+            __VUE_OPTIONS_API__: false,
+            __VUE_PROD_DEVTOOLS__: false,
+            __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false
+        }),
         new HtmlWebpackPlugin({
             filename: "index.html",
             template: path.resolve(__dirname, "src/index.html"),
