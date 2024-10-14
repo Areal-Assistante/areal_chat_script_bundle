@@ -21,6 +21,7 @@
     "@volar/language-server": "2.4.0-alpha.18",
     "@vue/language-server": "2.0.28",
     "autoprefixer": "^10.4.20",
+    "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.0",
     "postcss": "^8.4.47",
