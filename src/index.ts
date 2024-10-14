@@ -1,7 +1,8 @@
 import { createApp } from "vue"
 import "./styles/main.css"
-import FloatingButton from "./components/FloatingButton.vue"
 import App from "./components/App.vue"
+import FloatingButton from "./components/FloatingButton.vue"
+import ChatContainer from "./components/ChatContainer.vue"
 
 type ArealWindowType = {
     isCustomButton?: boolean,
@@ -29,7 +30,9 @@ declare global {
     // Vue app
     const app = createApp(App)
 
-    app.component("FloatingButton", FloatingButton)
+    app
+      .component("ChatContainer", ChatContainer)
+      .component("FloatingButton", FloatingButton)
 
     app.mount("#app")
 })()
