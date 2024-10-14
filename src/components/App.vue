@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="w-full h-full">
+  <div class="flex items-center">
     <FloatingButton/>
   </div>
 </template>
