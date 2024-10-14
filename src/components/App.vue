@@ -3,6 +3,11 @@ import { shallowRef } from "vue"
 
 const isChatOpen = shallowRef(false)
 const toggleOpen = () => isChatOpen.value = !isChatOpen.value
+
+
+window.areal = {
+  toggleChatWindow: toggleOpen,
+}
 </script>
 
 <template>

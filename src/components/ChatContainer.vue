@@ -1,14 +1,22 @@
 <script lang="ts" setup>
+import { computed } from "vue"
+
 defineProps<{ isShow: boolean }>()
 defineEmits(['close'])
+
+const app = computed(() =>
+  window.location.href.indexOf("localhost") >= 0 ?
+    "http://localhost:3000":
+    "https://script.areal.nonastudio.co"
+)
 </script>
 
 <template>
   <Teleport to="body">
     <div class="fixed z-[-99999] inset-0 bg-black/15 opacity-0 duration-[0.2s]"
-         :class="{ '!z-[999999] !opacity-100': isShow }">
+         :class="{ '!z-[999999] !opacity-100': isShow }" @click.self="$emit('close')">
 
-      <div class="absolute top-0 bottom-0 right-[-472px] w-[472px] flex flex-col"
+      <div class="absolute top-0 bottom-0 right-[-100%] md:right-[-472px] w-full md:w-[472px] flex flex-col"
            :class="{ '!right-0': isShow }">
         <div class="w-full p-[18px] bg-white shadow-[0px_4.502px_19.135px_0px] shadow-black/5 z-50 flex justify-between items-center" dir="rtl">
           <p>چت با آریل</p>
@@ -20,7 +28,7 @@ defineEmits(['close'])
           </svg>
         </div>
 
-        <iframe class="h-full w-full" src="http://localhost:3000"></iframe>
+        <iframe class="h-full w-full" :src="app"></iframe>
       </div>
     </div>
   </Teleport>

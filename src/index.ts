@@ -6,7 +6,12 @@ import ChatContainer from "./components/ChatContainer.vue"
 
 type ArealWindowType = {
     isCustomButton?: boolean,
-    openChatWindow?: () => void
+    toggleChatWindow?: () => void,
+    load?: () => void,
+    badge?: {
+        backgroundColor?: string,
+        textColor?: string
+    }
 }
 
 declare global {
@@ -24,7 +29,7 @@ declare global {
 
     // Main container
     const container = document.createElement("div")
-    container.id = "app"
+    container.id = "areal_app"
     document.body.appendChild(container)
 
     // Vue app
@@ -34,5 +39,5 @@ declare global {
       .component("ChatContainer", ChatContainer)
       .component("FloatingButton", FloatingButton)
 
-    app.mount("#app")
+    app.mount("#areal_app")
 })()
