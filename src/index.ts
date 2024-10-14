@@ -1,5 +1,7 @@
-import { createApp, h } from "vue"
+import { createApp } from "vue"
 import "./styles/main.css"
+import FloatingButton from "./components/FloatingButton.vue"
+import App from "./components/App.vue"
 
 type ArealWindowType = {
     isCustomButton?: boolean,
@@ -24,13 +26,10 @@ declare global {
     container.id = "app"
     document.body.appendChild(container)
 
-    const FloatingButton = require("./components/FloatingButton.vue")
-
     // Vue app
-    const app =  createApp(require("./components/App.vue"))
+    const app = createApp(App)
 
     app.component("FloatingButton", FloatingButton)
 
-
-    app.mount(container)
+    app.mount("#app")
 })()

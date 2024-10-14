@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    kir
+dd
   </div>
 </template>
 

@@ -40,7 +40,7 @@ module.exports = {
         alias: {
           vue: "vue/dist/vue.esm-bundler.js"
         },
-        extensions: ['.tsx', '.ts', '.js'],
+        extensions: ['.tsx', '.ts', '.js', '.vue'],
     },
     plugins: [
         new webpack.DefinePlugin({
@@ -59,6 +59,7 @@ module.exports = {
         watchFiles: ['src/**/*'],
         static: DIST_PATH,
         hot: true,
+        compress: true,
     },
     target: "web"
 }

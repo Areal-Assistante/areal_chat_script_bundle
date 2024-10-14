@@ -17,6 +17,7 @@
   },
   "dependencies": { "webpack": "^5.95.0" },
   "devDependencies": {
+    "@types/vue": "^2.0.0",
     "@volar/language-server": "2.4.0-alpha.18",
     "@vue/language-server": "2.0.28",
     "css-loader": "^7.1.2",

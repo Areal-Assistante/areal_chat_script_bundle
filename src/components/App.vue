@@ -3,7 +3,11 @@
 </script>
 
 <template>
-  <div>
-    dmd
+  <div class="w-full h-full">
+    <FloatingButton/>
   </div>
 </template>
+
+<style>
+
+</style>
